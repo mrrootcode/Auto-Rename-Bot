@@ -3,22 +3,22 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "24026315")
+    API_HASH  = os.environ.get("API_HASH", "4143de8d51d2248a4fac78055e8a2a88")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8118181574:AAEv-H-IQk0YcCkwwMzjJMjTZdXcnLdger0") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","AshutoshGoswami24")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","renamevjbot")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://dushkuloreta464:AHxA9BtFWQQKtN9b@cluster0.dhcje.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '5432660436').split()]
     # -- FORCE_SUB_CHANNELS = ["BotzPW","AshuSupport","AshutoshGoswami24"] -- # 
-    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'AshutoshGoswami24,BotzPW').split(',')
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    PORT = int(os.environ.get("PORT", ""))
+    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'SystemErrorBD').split(',')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "0"))
+    PORT = int(os.environ.get("PORT", "8080"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
